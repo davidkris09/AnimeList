@@ -1,0 +1,16 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Nav from '@/components/Nav'
+import Banner from '@/components/Banner'
+import ModalOpenCollection from '@/components/ModalOpenCollection'
+import ContentDetails from '@/components/ContentDetails'
+---
+
+<Layout title="Detail Info">
+    <Nav client:load/>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); place-items: center;">
+        <Banner client:load/>
+        <ContentDetails client:load/>
+    </div>
+    <ModalOpenCollection client:load/>
+</Layout>
