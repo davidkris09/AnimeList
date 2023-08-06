@@ -233,10 +233,18 @@ export const LabelLink = styled.a`
     }
 `
 
-export const $Notif = styled.div`
-    border-radius: 2rem;
+export const ButtonLoad = styled.button`
     border: 1px solid black;
-    background-color: red;
+    border-radius: 10px;
+    background-color: #0096FF;
     color: white;
     padding: 10px;
+    margin: auto;
+    place-items: center;
+    font-size: 1rem;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #7393B3;
+    }
 `

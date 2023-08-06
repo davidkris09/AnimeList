@@ -4,7 +4,6 @@ import { useStore } from "@nanostores/react";
 import { collection } from '@/nanostore';
 import {useEffect, useState} from "react";
 import type { Collection } from '@/pages/api/types';
-import Notification from './Notification';
 
 export const FormAddNewCollection = () => {
   const $collection: Collection[] = useStore(collection)
