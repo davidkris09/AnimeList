@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { collection, detailAnime } from '@/nanostore';
+import { collection, animeListPerCollection } from '@/pages/data/nanostore';
 import { useStore } from '@nanostores/react';
-import type { Collection, DetailAnimeType } from '@/pages/api/types';
+import type { Collection } from '@/pages/data/types';
 import { 
     Row,  
     Card, 
@@ -14,7 +14,7 @@ import {
 from "@/styles/styles";
 
 export const CollectionList = () => {
-    const $collection: Collection[] = useStore(collection)
+    const $collection: Collection[] = useStore(animeListPerCollection)
     const [collectionList, setCollectionList] = useState<Collection[]>([])
 
     useEffect(() => {

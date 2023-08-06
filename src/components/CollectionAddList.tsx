@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import { ContentListCollectionModal, ListCollection, AddButton, LabelLink } from '@/styles/styles';
-import { collection, detailAnime, editCollection } from '@/nanostore';
+import { collection, detailAnime, editCollection, getAnimePerCollcetion } from '@/pages/data/nanostore';
 import { useStore } from '@nanostores/react';
-import type { Collection, DetailAnimeType } from '@/pages/api/types';
+import type { Collection, DetailAnimeType } from '@/pages/data/types';
 
 export const CollectionAddList = () => {
   const $collection: Collection[] = useStore(collection)
@@ -16,8 +16,10 @@ export const CollectionAddList = () => {
     }
   }
 
-  const handleLinking = (name) => {
-    window.location.href = `/collections`
+  const handleLinking = (item) => {
+
+    getAnimePerCollcetion(item)
+    window.location.href = `/listpercollections`
   }
 
   return (
@@ -29,7 +31,7 @@ export const CollectionAddList = () => {
               return (
                 <>
                   <ListCollection key={index}>
-                    <LabelLink onClick={() => handleLinking(item.name)}>{item.name}</LabelLink>
+                    <LabelLink onClick={() => handleLinking(item)}>{item.name}</LabelLink>
                     <AddButton onClick={() => handleAddAnimeToCollection(item)}>+</AddButton>
                     {/* {
                       item.list.includes($detailAnime.title.english) ? <label style={{color: '#7FFF00'}}>added</label> :

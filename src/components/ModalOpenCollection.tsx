@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import {ContainerModal} from '@/styles/styles'
-import { isModalOpen, collection } from "@/nanostore";
+import { isModalOpen, collection } from "@/pages/data/nanostore";
 import { useStore } from "@nanostores/react";
 import { H2, ContentModal } from '@/styles/styles';
-import type { Collection } from '@/pages/api/types';
+import type { Collection } from '@/pages/data/types';
 import CollectionAddList from './CollectionAddList';
 import FormAddNewCollection from './FormAddNewCollection';
 

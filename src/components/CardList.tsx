@@ -9,9 +9,9 @@ import {
 } 
 from "@/styles/styles";
 import {useEffect, useState} from "react";
-import { getAnimeList } from "@/pages/api/fetchData";
-import { changeDetailDisplay } from "@/nanostore";
-import type { DetailAnimeType } from "@/pages/api/types";
+import { getAnimeList } from "@/pages/data/fetchData";
+import { changeDetailDisplay } from "@/pages/data/nanostore";
+import type { DetailAnimeType } from "@/pages/data/types";
 
 interface ListAnime {
     data: {

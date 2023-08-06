@@ -1,8 +1,8 @@
 import {useStore} from '@nanostores/react'
-import { detailAnime } from "@/nanostore";
+import { detailAnime } from "@/pages/data/nanostore";
 import {useState, useEffect} from 'react'
 import {DetailCoverImage} from '../styles/styles'
-import type { DetailAnimeType } from '@/pages/api/types';
+import type { DetailAnimeType } from '@/pages/data/types';
 
 const Banner = () => {
     const list: DetailAnimeType[] = useStore(detailAnime)

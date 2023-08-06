@@ -1,7 +1,7 @@
 import { atom, computed } from 'nanostores';
 import { persistentAtom } from '@nanostores/persistent'
-import type { DetailAnimeType } from './pages/api/types';
-import type { Collection } from './pages/api/types';
+import type { DetailAnimeType } from './types';
+import type { Collection } from './types';
 
 export const isModalOpen = atom(false)
 export const isModalCollectionOpen = atom(false)
@@ -12,6 +12,11 @@ export const detailAnime = persistentAtom<DetailAnimeType[]>('list:', [], {
 });
 
 export const collection = persistentAtom<Collection[]>('collection:', [], {
+    encode: JSON.stringify,
+    decode: JSON.parse,
+});
+
+export const animeListPerCollection = persistentAtom<Collection[]>('detail_collection:', [], {
     encode: JSON.stringify,
     decode: JSON.parse,
 });
@@ -34,4 +39,8 @@ export function addCollection(list) {
 
 export function editCollection(list) {
     collection.set([...collection.get(), list])
+}
+
+export function getAnimePerCollcetion(data) {
+    animeListPerCollection.set(data)
 }

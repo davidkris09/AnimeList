@@ -1,9 +1,9 @@
 import {Button, FieldAddCollection} from '@/styles/styles'
-import { isModalCollectionOpen, addCollection } from "@/nanostore";
+import { isModalCollectionOpen, addCollection } from "@/pages/data/nanostore";
 import { useStore } from "@nanostores/react";
-import { collection } from '@/nanostore';
+import { collection } from '@/pages/data/nanostore';
 import {useEffect, useState} from "react";
-import type { Collection } from '@/pages/api/types';
+import type { Collection } from '@/pages/data/types';
 
 export const FormAddNewCollection = () => {
   const $collection: Collection[] = useStore(collection)

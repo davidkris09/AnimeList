@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Nav from '../../components/Nav'
+import CollectionList from '../../components/CollectionList'
+---
+
+<Layout title="Collections">
+    <Nav client:load/>
+    <CollectionList client:load/>
+</Layout>

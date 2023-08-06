@@ -1,6 +1,6 @@
 import { Button } from "@/styles/styles";
 import { useState } from 'react'
-import { isModalOpen } from "@/nanostore";
+import { isModalOpen } from "@/pages/data/nanostore";
 import { useStore } from "@nanostores/react";
 
 const ButtonAddCollection = () => {
